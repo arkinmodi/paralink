@@ -1,0 +1,138 @@
+/* PARALINK * ICS4UR-A * NOVEMBER 11, 2016 * v1.0 */
+
+/*Navagation Bar*/
+.title {
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #000000;
+  text-align: left;
+  font-size: 35px;
+  margin-left: 12%;
+}
+
+nav {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  display: inline-block;
+}
+
+.one {
+  width: 15%;
+  height: 50px;
+  float: left;
+}
+
+.two {
+  margin-left: 15%;
+  height: 50px;
+  float: right;
+}
+
+.sideLink {
+  background-color: #f8f8f8;
+  color: #f8f8f8;
+  list-style: none;
+  text-align: right;
+  padding: 20px 0 20px 0;
+}
+
+.sideLink > li {
+  padding-right: 50px;
+  display: inline-block;
+}
+
+.sideLink > li > a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/*Heading*/
+.heading {
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+/*Email Input*/
+.container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.email{
+  text-align: center;
+  font-family: europa, sans-serif;
+  color: #607D8B;
+  font-style: normal;
+  font-weight: 500;
+  width: 15%;
+  padding: 12px 20px;
+  border: 2px solid #607D8B;
+  transition: 0.5s;
+  outline: none;
+  background-color: #f8f8f8;
+}
+
+.email:focus {
+    border: 2px solid #0089f2;
+}
+
+/*Password Input*/
+.pass{
+  text-align: center;
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  width: 15%;
+  padding: 12px 20px;
+  border: 2px solid #607D8B;
+  transition: 0.5s;
+  outline: none;
+  background-color: #f8f8f8;
+}
+
+.pass:focus {
+  border: 2px solid #0089f2;
+}
+
+/*Buttons*/
+.btn {
+  background-color: #0089f2;
+  border: 3px solid #0089f2;
+  border-radius: 3px;
+  color: #f8f8f8;
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  width: 10%;
+  height: 35px;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 0px 1px #00b1f2;
+}
+
+/*Register Link*/
+.register {
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-weight: 300; 
+}
+
+.registerLink {
+  text-decoration: none;
+}
+
+/*Background*/
+body {
+  background-color: #f8f8f8;
+}

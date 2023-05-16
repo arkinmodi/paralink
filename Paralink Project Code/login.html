@@ -1,0 +1,64 @@
+<!-- PARALINK * ICS4UR-A * NOVEMBER 22, 2016 -->
+
+<!DOCTYPE html>
+<html>
+    <meta name="google-signin-client_id" content="343658080927-nmsdl6o0lon7uojbpqjdvblpkqdtmeg4.apps.googleusercontent.com">
+    <link rel="stylesheet" href="CSS/login.css" type="text/css"/>
+    <script type="text/javascript" src="app.js"></script>
+    <!--Typekit-->
+    <script src="https://use.typekit.net/vvs4qjy.js"></script>
+    <script>try{Typekit.load({ async: true });} catch(e){}</script>
+<!------------------------------------------------------- TAB HEADER ---------------------------------------------------->    
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="Images/ParaLink_Braille_Blue.png" type="image/gif" sizes="24x24">
+        <title>ParaLink | Login</title>
+    </head>
+<!--------------------------------------------------------- NAVBAR ------------------------------------------------------>
+    <body>
+        <nav>
+            <div class="one">
+                <p><h1 class="title">ParaLink</h1></p>
+            </div>
+            <div class="two">
+                    <ul class="sideLink">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+            </div>
+        </nav>
+<!------------------------------------------------------ LOGIN ---------------------------------------------------------->
+        <div class="container">
+            <h2 class="heading">Welcome</h2>
+            <!--Email-->
+                <input type="email" id="txtEmail" placeholder="Email" class="email"/>
+            <br>
+            <!--Password-->
+                <input type="password" id="txtPassword" placeholder="Password" class="pass"/>
+            <br>
+            <!-- Submit Buttons-->
+                <button id="btnLogin" class="btn btn-action">Login</button>
+            <p class="register">Don't have an account? <a href="register.html" class="registerLink">Register here ></a></p>
+        </div>
+<!---------------------------------------------------- JAVASCRIPT ------------------------------------------------------->
+<script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+      apiKey: "",
+      authDomain: "",
+      databaseURL: "",
+      storageBucket: "",
+      messagingSenderId: ""
+ };
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript" src="app.js"></script>
+
+<script>
+    //Load Email Login
+    window.onload=login();
+</script>
+
+    </body>
+</html>

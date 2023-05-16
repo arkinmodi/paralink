@@ -1,0 +1,155 @@
+<!-- PARALINK * ICS4UR-A * JANUARY 10, 2017 * v1.0 -->
+
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/profile.css" type="text/css"/>
+    <script type="text/javascript" src="app.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Typekit-->
+    <script src="https://use.typekit.net/vvs4qjy.js"></script>
+    <script>try{Typekit.load({ async: true });} catch(e){}</script>
+    
+<!------------------------------------------------------- TAB HEADER ---------------------------------------------------->    
+    <head>
+        <link rel="icon" href="Images/ParaLink_Braille_Blue.png" type="image/gif" sizes="24x24">
+        <title>ParaLink | Profile</title>
+    </head>
+    
+<!--------------------------------------------------------- NAVBAR ------------------------------------------------------>
+    <body class="body"> 
+        <!--Main Nav-->
+        <ul class="nav">
+            <a href="#"><i id="menu_icon" class="material-icons"  onclick="openNav()">menu</i></a>
+            <!--<a href="#" onclick="openNav()"><img src="Images/menu.png"></a>-->
+            <div><a href="supportus.html">Support</a></div>
+            <div><a href="">Settings</a></div>
+            <button href="logout.html" id="btnLogout" class="btnLogout"><b>Logout</b></button>
+        </ul>   
+        
+        
+        <!--Side Nav-->
+        <div id="mySidenav" class="sidenav">
+            <span class="user_name2" id="txtName"></span>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="home.html" class="job_offers">Find a Job</a>
+            <a href="job_creation.html" class="find_job">Post a Job</a>
+            
+            
+            <a href="profile.html" class="nav_links">Profile</a>
+            <a href="#" class="nav_links">Job Offers</a>
+            <a href="about.html" class="nav_links">Tour</a>
+            <a href="#" class="nav_links">Account Settings</a>
+            <a href="#" class="nav_links">Contact</a>
+            <a href="support.html" class="nav_links">Help & Feedback</a>
+            
+            <a href="#" class="nav_legal">Legal</a>
+            <button href="logout.html" id="btnLogoutNav" class="btnLogoutNav">Logout</button>
+        </div>
+        
+        <!--Displays Title & Name-->
+        <div class="info_bar">
+            <p id="page_title">Profile</p>
+            <div id="info_divider"></div>
+            <div id="info_name">
+            <p id="txtName2"></p>
+            <p id="current_job"></p>
+            </div>
+        </div>
+        
+<!------------------------------------------------------ PERSONAL INFO CARD ---------------------------------------------------->
+        <div class="bg_header">
+            <img id="profilePicture" class="profile_image"/>
+            <p id="current_job2"></p> 
+            <p id="current_company"></p>
+            <p id="current_age"></p>
+            <p id="current_gender"></p>
+            <p id="current_location"></p>
+        </div>
+        
+        <div class="bg_header2">
+            <p id="experience">Work Experience</p> 
+            <p id="current_company2"></p>
+            <p id="current_job3">CEO</p>
+            <p id="active_since">November 2016 to Present</p>
+        </div>
+        
+         <div class="bg_header3">
+            <p id="skills">Skills</p> 
+            <p id="skill1">Organized</p>
+            <p id="skill2">Responsible</p>
+            <p id="skill3">Software Experience</p>
+            <p id="interests">Interests</p> 
+            <p id="skill4">Photography</p>
+            <p id="skill5">Design</p>
+            <p id="skill6">Technology</p>
+        </div>
+        
+        
+        <div id="jobHistory">
+        </div>
+<!------------------------------------------------------ JAVASCRIPT ----------------------------------------------------->
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+          apiKey: "",
+          authDomain: "",
+          databaseURL: "",
+          storageBucket: "",
+          messagingSenderId: ""
+     };
+      firebase.initializeApp(config);
+    </script>
+    
+    <!--Link app.js-->
+    <script type="text/javascript" src="app.js"></script>
+    
+    <!--Load Logout Function-->
+    <script>
+        window.onload=logout();
+        window.onload=logoutNav();
+        window.onload=getProfile();
+    </script>
+    
+    <!--Load Profile Information-->
+    <script>
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+          
+                //Get Full Name & Display It
+                var name = user.displayName;
+                document.getElementById("txtName2").innerHTML = name;
+                
+                //Get Profile Picture URL & Display It
+                var profilePicture = user.photoURL;
+                document.getElementById("profilePicture").src = profilePicture;
+                
+                //Get Current Job Title & Display It
+                firebase.database().ref("user_data/" + firebase.auth().currentUser.uid).child("job_experience/current_job/job_title").on("value", function(snapshot){
+                    document.getElementById("current_job").innerHTML = snapshot.val();
+                    document.getElementById("current_job2").innerHTML = snapshot.val();
+                });
+                
+                //Get Age & Display it
+                firebase.database().ref("user_data/" + firebase.auth().currentUser.uid).child("user/displayAge").on("value", function(snapshot){
+                    document.getElementById("current_age").innerHTML = snapshot.val();
+                });
+                
+                //Get Gender & Display it
+                firebase.database().ref("user_data/" + firebase.auth().currentUser.uid).child("user/displayGender").on("value", function(snapshot){
+                    document.getElementById("current_gender").innerHTML = snapshot.val();
+                });
+                
+                //Get Location & Display it
+                firebase.database().ref("user_data/" + firebase.auth().currentUser.uid).child("user/displayLocation").on("value", function(snapshot){
+                    document.getElementById("current_location").innerHTML = snapshot.val();
+                });
+            };
+            
+        });
+    </script>
+    
+    </body>
+</html>

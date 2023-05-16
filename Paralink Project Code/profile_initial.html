@@ -1,0 +1,72 @@
+<!-- PARALINK * ICS4UR-A * JANUARY 04, 2017 * v1.0 -->
+
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="CSS/profile_initial_setup.css">
+    <!--Typekit-->
+    <script src="https://use.typekit.net/vvs4qjy.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+<!------------------------------------------------------- TAB HEADER ---------------------------------------------------->    
+    <head>
+        <title>ParaLink | Profile Setup</title>
+        <link rel="icon" href="Images/ParaLink_Braille_Blue.png" type="image/gif" sizes="24x24">
+    </head>
+<!------------------------------------------------------- BODY ---------------------------------------------------------->
+    <body>
+        <div class="container">
+            <center>
+            <h2 class="heading">Profile Setup</h2>
+            <!--Name-->
+            <p class="heading">Name</p>
+                <input type="text" id="txtName" placeholder="Full Name"/>
+            <br>
+            <!--Profile Picture-->
+            <p class="heading">Profile Picture</p>
+                <input type="url" id="txtProfilePicture" placeholder="Profile Picture URL">
+                <!--input type="file" id="fileProfilePicture" /-->
+            <!--Birthday-->
+            <p class="heading">Age</p>
+                <input type="text" id="txtAge" placeholder="17"/>
+            <br>
+            <p class="heading">Location</p>
+                <input type="text" id="txtLocation" placeholder="City, Province, Country"/>
+            <br>
+            <!--Gender-->
+            <p class="heading">Gender</p>
+                <!--Gender Select-->
+                <select id="txtGender">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Non-Binary">Non-Binary</option>
+                    <option value="Other">Other</option>
+                </select>
+            <br>
+            <br>
+            <!-- Submit Buttons-->
+                <button id="btnSubmit" class="btn btn-action">Submit</button>
+                </center>
+        </div>
+<!---------------------------------------------------- JAVASCRIPT ------------------------------------------------------->
+<script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+      apiKey: "",
+      authDomain: "",
+      databaseURL: "",
+      storageBucket: "",
+      messagingSenderId: ""
+ };
+  firebase.initializeApp(config);
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+
+<script>
+    window.onload=profileUpdate();
+</script>
+
+
+    </body>
+</html>

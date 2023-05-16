@@ -1,0 +1,64 @@
+<!-- PARALINK * ICS4UR-A * JANUARY 04, 2017 * v1.0 -->
+
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="CSS/profile_job_history.css">
+    <!--Typekit-->
+    <script src="https://use.typekit.net/vvs4qjy.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<!------------------------------------------------------- TAB HEADER ---------------------------------------------------->    
+    <head>
+        <title>ParaLink | Profile Setup</title>
+        <link rel="icon" href="Images/ParaLink_Braille_Blue.png" type="image/gif" sizes="24x24">
+    </head>
+<!------------------------------------------------------ BODY ----------------------------------------------------------->
+    <body>
+        <div class="container">
+            <center>
+            <h2 class="heading">Job History</h2>
+            <!--Current Job-->
+            <p class="heading">Current Job</p>
+                <!--Job Title-->
+                <input type="text" placeholder="Job Title" id="txtCurrentJobTitle"/>
+                <!--Company Name-->
+                <input type="text" placeholder="Company Name" id="txtCurrentCompanyName"/>
+                <br>
+                <!--Date Range-->
+                <p class="heading">Start Date</p>
+                <input type="date" id="txtCurrentJobStartDate"/>
+                <!--p class="heading">End Date</p>
+                <input type="date" id="txtCurrentJobEndDate"/-->
+                <br>
+                <!--Job Description-->
+                <p class="heading">Job Description</p>
+                <textarea placeholder="Describe Your Responsibilities" id="txtCurrentJobResponsibilities"></textarea>
+                <br>
+                <br>
+                <!-- Submit Buttons-->
+                <button id="btnSubmit" class="btn btn-action">Submit</button>
+        </div>
+            </center>
+<!---------------------------------------------------- JAVASCRIPT ------------------------------------------------------->
+<script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+      apiKey: "",
+      authDomain: "",
+      databaseURL: "",
+      storageBucket: "",
+      messagingSenderId: ""
+ };
+  firebase.initializeApp(config);
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+
+<script>
+    window.onload=jobHistory();
+</script>
+
+
+    </body>
+</html>

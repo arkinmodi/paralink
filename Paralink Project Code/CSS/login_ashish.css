@@ -1,0 +1,159 @@
+/*Navagation Bar*/
+.title {
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-size: medium;
+  font-weight: 300;
+  color: #F8F8F8;
+  left: 6px;
+  font-size: 35px;
+  margin-left: 12%;
+  position: relative;
+  top: -8vh;
+}
+
+nav {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 300;
+  display: inline-block;
+}
+
+.logo {
+    position: relative;
+    top: 70px;
+}
+
+.one {
+  width: 15%;
+  height: 50px;
+  float: left;
+}
+
+.two {
+  margin-left: 15%;
+  height: 50px;
+  float: right;
+}
+
+.sideLink {
+  color: #F8F8F8;
+  list-style: none;
+  text-align: right;
+  padding: 20px 0 20px 0;
+  position: relative;
+  top: -8vh;
+}
+
+.sideLink > li {
+  padding-right: 50px;
+  display: inline-block;
+}
+
+.sideLink > li > a {
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+/*Heading*/
+.heading {
+  color: #F8F8F8;
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/*Email Input*/
+.container {
+  height: 60vh;
+  display: flex;
+  color: #F8F8F8;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.email{
+  text-align: center;
+  font-family: europa, sans-serif;
+  color: #607D8B;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  width: 15%;
+  padding: 12px 20px;
+  border: 3px solid #607D8B;
+  transition: 0.5s;
+  outline: none;
+  background-color: #F8F8F8;
+}
+
+.email:focus {
+  border: 3px solid #0089F2;
+  text-color: #607D8B;
+}
+
+/*Password Input*/
+.pass{
+  text-align: center;
+  font-family: europa, sans-serif;
+  color: #607D8B;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  width: 15%;
+  padding: 12px 20px;
+  border: 3px solid #607D8B;
+  transition: 0.5s;
+  outline: none;
+  background-color: #F8F8F8;
+}
+
+.pass:focus {
+  border: 3px solid #0089F2;
+  text-color: #607D8B;
+}
+
+/*Buttons*/
+.btn {
+  background-color: #0089F2;
+  border: 0px solid;
+  border-radius: 0px;
+  color: #F8F8F8;
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 300;
+  width: 15%;
+  height: 6.5vh;
+}
+
+.btn:hover {
+  background-color: #199BFF;
+}
+
+/*Register Link*/
+.register {
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 300; 
+}
+
+.registerLink {
+  text-decoration: none;
+  color: #0089F2;
+  font-size: 18px;
+}
+
+.copyright {
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 300; 
+}

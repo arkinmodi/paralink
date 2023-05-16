@@ -1,0 +1,76 @@
+<!-- PARALINK * ICS4UR-A * JANUARY 10, 2017 * v1.0 -->
+
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="CSS/home.css">
+    <script type="text/javascript" src="app.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <meta name="theme-color" content="#222222"/>
+    <!--Typekit-->
+    <script src="https://use.typekit.net/vvs4qjy.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    
+<!------------------------------------------------------- TAB HEADER ---------------------------------------------------->    
+    <head>
+        <link rel="icon" href="Images/ParaLink_Braille_Blue.png" type="image/gif" sizes="32x32">
+        <title>ParaLink | Home</title>
+    </head>
+    
+<!--------------------------------------------------------- NAVBAR ------------------------------------------------------>
+    <body>
+        <!--Main Nav-->
+        <ul class="nav">
+            <a href="#"><i id="menu_icon" class="material-icons" onclick="openNav()">menu</i></a>
+            <!--div><a href="filter.html">Filter</a></div-->
+            <div><a href="supportus.html">Support</a></div>
+            <div><a href="">Settings</a></div>
+            <button href="logout.html" id="btnLogout" class="btnLogout"><b>Logout</b></button>
+        </ul>
+        
+        <!--Side Nav-->
+        <div id="mySidenav" class="sidenav">
+            <span class="user_name2" id="txtName"></span>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="home.html" class="job_offers">Find a Job</a>
+            <a href="job_creation.html" class="find_job">Post a Job</a>
+            
+            
+            <a href="profile.html" class="nav_links">Profile</a>
+            <a href="" class="nav_links">Job Offers</a>
+            <a href="#" class="nav_links">Tour</a>
+            <a href="#" class="nav_links">Account Settings</a>
+            <a href="#" class="nav_links">Contact</a>
+            <a href="support.html" class="nav_links">Help & Feedback</a>
+            
+            <a href="#" class="nav_legal">Legal</a>
+            <button href="logout.html" id="btnLogoutNav" class="btnLogoutNav">Logout</button>
+        </div>
+<!--------------------------------------------------- JOB LISTINGS ------------------------------------------------------>
+    <div id="jobPosts">
+        <center>
+            <p id="noPosts">There are not job postings at the moment.</p>
+        </center>
+    </div>
+<!---------------------------------------------------- JAVASCRIPT ------------------------------------------------------->
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "",
+        authDomain: "",
+        databaseURL: "",
+        storageBucket: "",
+        messagingSenderId: ""
+   };
+    firebase.initializeApp(config);
+    </script>
+    <script>
+        window.onload=logout();
+        window.onload=logoutNav();
+        window.onload=getProfile();
+        window.onload=listJobs();
+    </script>
+    
+    </body>
+</html>

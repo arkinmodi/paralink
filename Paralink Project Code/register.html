@@ -1,0 +1,64 @@
+<!-- PARALINK * ICS4UR-A * NOVEMBER 22, 2016 * v1.0 -->
+
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="CSS/register.css">
+    <!--Typekit-->
+    <script src="https://use.typekit.net/vvs4qjy.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    
+<!------------------------------------------------------- TAB HEADER ---------------------------------------------------->    
+    <head>
+        <title>ParaLink | Register</title>
+        <link rel="icon" href="Images/ParaLink_Braille_Blue.png" type="image/gif" sizes="24x24">
+    </head>
+<!--------------------------------------------------------- NAVBAR ------------------------------------------------------>
+    <body>
+        <nav>
+            <div class="one">
+                <p><h1 class="title">ParaLink</h1></p>
+            </div>
+            <div class="two">
+                    <ul class="sideLink">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="supportus.html">Support</a></li>
+                    </ul>
+            </div>
+        </nav>
+<!------------------------------------------------------ REGISTER ------------------------------------------------------->
+    <body>
+        <div class="container">
+            <h2 class="heading">Register</h2>
+            <!--Email-->
+                <input type="email" id="txtEmail" placeholder="Email" class="email"/>
+            <br>
+            <!--Password-->
+                <input type="password" id="txtPassword" placeholder="Password" class="pass"/>
+            <br>
+            <!-- Submit Button -->
+                <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
+            <p class="register">Have an account? <a href="login.html" class="loginLink">Sign In ></a></p>
+        </div>
+<!---------------------------------------------------- JAVASCRIPT ------------------------------------------------------->
+
+<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+      apiKey: "",
+      authDomain: "",
+      databaseURL: "",
+      storageBucket: "",
+      messagingSenderId: ""
+ };
+  firebase.initializeApp(config);
+</script>
+<script type="text/javascript" src="app.js"></script>
+<script>
+    window.onload=signUp();
+</script>
+
+
+
+    </body>
+</html>

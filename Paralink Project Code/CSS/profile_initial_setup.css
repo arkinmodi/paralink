@@ -1,0 +1,67 @@
+/* PARALINK * ICS4UR-A * NOVEMBER 22, 2016 * v1.0 */
+
+/*Heading*/
+.heading {
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  margin: 1%;
+}
+
+.container {
+  margin: 10% 0 10% 0;
+}
+
+/*Input Boxes*/
+input{
+  text-align: center;
+  font-family: europa, sans-serif;
+  color: #607D8B;
+  font-style: normal;
+  font-weight: 500;
+  width: 15%;
+  padding: 12px 20px;
+  border: 2px solid #607D8B;
+  transition: 0.5s;
+  outline: none;
+  background-color: #f8f8f8;
+}
+
+input:focus {
+    border: 2px solid #0089f2;
+}
+
+select{
+  text-align: center;
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  width: 15%;
+  padding: 12px 20px;
+  margin: 0;
+  transition: 0.5s;
+  outline: none;
+}
+
+
+/*Buttons*/
+.btn {
+  background-color: #0089f2;
+  border: 3px solid #0089f2;
+  border-radius: 3px;
+  color: #f8f8f8;
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  width: 10%;
+  height: 35px;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 0px 1px #00b1f2;
+}
+
+/*Background*/
+body {
+  background-color: #f8f8f8;
+}

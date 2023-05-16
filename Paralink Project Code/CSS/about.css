@@ -1,0 +1,146 @@
+/* PARALINK * ICS4UR-A * NOVEMBER 09, 2016 * v1.0 */
+
+/*Background*/
+body{
+  background-color: #f8f8f8;
+  background-position: top;
+}
+
+/*Navagation Bar*/
+.nav {
+  width: 100%;
+  padding: 0;
+  border: 0;
+}
+
+.sideLink {
+  background-color: #f8f8f8;
+  color: #f8f8f8;
+  list-style: none;
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  text-align: right;
+  position: absolute;
+  top: -4%;
+  right: 0%;
+  width: 100%;
+  padding: 30px 0 30px 0;
+}
+
+.sideLink > li {
+  padding-right: 50px;
+  display: inline-block;
+}
+
+.sideLink > li > a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.container {
+  height: 100vh;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Heading 1*/
+#heading {
+  font-family: europa, sans-serif;
+  font-style: normal;
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  top: 25%;
+  left: 27%;
+  font-size: 35px;
+}
+
+
+/*ParaLink Description 1*/
+.description {
+  text-align: center;
+  font-family: europa, sans-serif;
+  font-weight: normal;
+  font-size: 3.5vh;
+  position: absolute;
+  top: 105vh;
+  letter-spacing: 0vh;
+  line-height: 200%;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+/*Clickable Professional Image*/
+#professional {
+  height: 90vh;
+  width: 100%;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Color Image*/
+#color {
+  height: 100vh;
+  width: 100%;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*ParaLink Description 2*/
+#story {
+  text-align: center;
+  font-family: europa, sans-serif;
+  font-weight: normal;
+  font-size: 3.5vh;
+  position: absolute;
+  top: 255vh;
+  letter-spacing: 0vh;
+  line-height: 200%;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+/*Team Pictures*/
+#Rah {
+  width: 20vh;
+  height: 20vh;
+  border:1px solid #021a40;
+}
+
+#Har {
+  width: 20vh;
+  height: 20vh;
+  border:1px solid #021a40;
+}
+
+#Ark {
+  width: 20vh;
+  height: 20vh;
+  border:1px solid #021a40;
+}
+
+#Ash {
+  width: 20vh;
+  height: 20vh;
+  border:1px solid #021a40;
+}
+
+/*Clickable Arrow Image*/
+#scroll {
+  position: absolute;
+  top: 85vh;
+  left: 50%;
+  right: 50%;
+  height: 8vh;
+  width: 8vh;
+}

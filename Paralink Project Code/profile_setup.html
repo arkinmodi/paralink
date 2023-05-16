@@ -1,0 +1,102 @@
+<!-- PARALINK * ICS4UR-A * JANUARY 10, 2017 * v1.0 -->
+
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/profile_setup.css" type="text/css"/>
+    <script type="text/javascript" src="app.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Typekit-->
+    <script src="https://use.typekit.net/vvs4qjy.js"></script>
+    <script>try{Typekit.load({ async: true });} catch(e){}</script>
+    
+<!------------------------------------------------------- TAB HEADER ---------------------------------------------------->    
+    <head>
+        <link rel="icon" href="Images/ParaLink_Braille_Blue.png" type="image/gif" sizes="24x24">
+        <title>ParaLink | Profile Setup</title>
+    </head>
+    
+<!--------------------------------------------------------- NAVBAR ------------------------------------------------------>
+    <body class="body"> 
+        <!--Main Nav-->
+        <ul class="nav">
+            <a href="#"><i id="menu_icon" class="material-icons"  onclick="openNav()">menu</i></a>
+            <!--<a href="#" onclick="openNav()"><img src="Images/menu.png"></a>-->
+            <div><a href="supportus.html">Support</a></div>
+            <div><a href="">Settings</a></div>
+            <button href="logout.html" id="btnLogout" class="btnLogout"><b>Logout</b></button>
+        </ul>   
+        
+        
+        <!--Side Nav-->
+        <div id="mySidenav" class="sidenav">
+            <span class="user_name2" id="txtName"></span>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="home.html" class="job_offers">Find a Job</a>
+            <a href="job_creation.html" class="find_job">Post a Job</a>
+            
+            
+            <a href="profile.html" class="nav_links">Profile</a>
+            <a href="about.html" class="nav_links">Job Offers</a>
+            <a href="#" class="nav_links">Tour</a>
+            <a href="#" class="nav_links">Account Settings</a>
+            <a href="#" class="nav_links">Contact</a>
+            <a href="support.html" class="nav_links">Help & Feedback</a>
+            
+            <a href="#" class="nav_legal">Legal</a>
+            <button href="logout.html" id="btnLogoutNav" class="btnLogoutNav">Logout</button>
+        </div>
+<!------------------------------------------------------- BODY ---------------------------------------------------------->
+    <body>
+        <div class="container">
+            <center>
+            <h2 class="heading">Profile Setup</h2>
+            <!--Name-->
+            <p class="heading">Name</p>
+                <input type="text" id="txtName" placeholder="Full Name"/>
+            <br>
+            <!--Profile Picture-->
+            <p class="heading">Profile Picture</p>
+                <input type="url" id="txtProfilePicture" placeholder="Profile Picture URL">
+            <!--Birthday-->
+            <p class="heading">Birthday</p>
+                <input type="date" id="birthday"/>
+            <br>
+            <!--Gender-->
+            <p class="heading">Gender</p>
+                <!--Gender Select-->
+                <select id="gender">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Non-Binary">Non-Binary</option>
+                    <option value="Other">Other</option>
+                </select>
+            <br>
+            <br>
+            <!-- Submit Buttons-->
+                <button id="btnSubmit" class="btn btn-action">Submit</button>
+                </center>
+        </div>
+<!---------------------------------------------------- JAVASCRIPT ------------------------------------------------------->
+        <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+              apiKey: "",
+              authDomain: "",
+              databaseURL: "",
+              storageBucket: "",
+              messagingSenderId: ""
+         };
+          firebase.initializeApp(config);
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        
+        <script>
+            window.onload=profileUpdate();
+        </script>
+
+    </body>
+</html>

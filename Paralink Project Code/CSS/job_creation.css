@@ -1,0 +1,268 @@
+/* PARALINK * ICS4UR-A * DECEMBER 24, 2016 * v1.0 */
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: europa, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    background-color: #f8f8f8;
+}
+
+/*MAIN NAV BAR*/
+ul {
+    margin: 0;
+}
+
+.nav {
+    background-color: #222222;
+    color: #f8f8f8;
+    list-style: none;
+    text-align: right;
+    padding: 0.3vh 0;
+    position: relative;
+    vertical-align: middle;
+
+}
+
+#menu_icon {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 5vh;
+  margin-right: 70vw;
+}
+
+.nav > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav > a:hover {
+  color: #c1c1c1;
+}
+
+.nav > div {
+    display: inline-block;
+    padding-right: 50px;
+    padding-bottom: 0.5vh;
+    font-family: europa, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #f8f8f8;
+    vertical-align: middle;
+}
+
+.nav > div > a {
+    text-decoration: none;
+    color: #f8f8f8;
+}
+
+.nav > div > a:hover {
+    color: #c1c1c1;
+}
+
+.btnLogout {
+    font-family: europa, sans-serif;
+    font-style: normal;
+    font-size: 2.5vh;
+    font-weight: 600;
+    padding: 0 50px 0.5vh 0;
+    background-color: transparent;
+    color: #f8f8f8;
+    border-color: transparent;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+.btnLogout:hover {
+    color: #c1c1c1;
+}
+
+/*SIDE NAV*/
+.sidenav {
+    height: 100%;
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    font-family: "Europa", sans-serif;
+    font-style: normal;
+    background-color: #0089f2;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.08s; /* 0.5 second transition effect to slide in the sidenav */
+    box-shadow: 0 2vw 3vw 0 rgba(0, 0, 0, 0.18);
+
+}
+
+.sidenav a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.09s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #E0E0E0;
+}
+
+.user_name2 {
+  font-size: 2.5vh;
+  font-weight: 200;
+  padding: 2.5vh 0 5vh 11vw;
+  color: #fff;
+  display: block;
+  transition: 0.09s
+}
+
+.job_offers {
+  font-size: 3.7vh;
+  font-weight: lighter;
+  padding: 2.5vh 0 0 11vw;
+  color: #fff;
+  display: block;
+  transition: 0.09s
+}
+
+.find_job {
+  font-size: 3.7vh;
+  font-weight: lighter;
+  padding: 1.5vh 0 11vh 11vw;
+  color: #fff;
+  display: block;
+  transition: 0.09s
+}
+
+.nav_links {
+  font-size: 2.7vh;
+  font-weight: 200;
+  padding: 1vh 0 0 11vw;
+  color: #fff;
+  display: block;
+  transition: 0.09s
+}
+
+.nav_legal {
+  font-size: 2.3vh;
+  font-weight: 200;
+  margin: 25vh 0 0 11vw;
+  color: #fff;
+  display: inline-block;
+  transition: 0.09s
+}
+
+.btnLogoutNav {
+    font-family: europa, sans-serif;
+    font-style: normal;
+    font-size: 2.3vh;
+    font-weight: 400;
+    padding: 0 0 0 46%;
+    background-color: transparent;
+    color: #fff;
+    border-color: transparent;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    transition: 0.09s
+}
+
+.btnLogoutNav:hover {
+    color: #E0E0E0;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    padding: 1.8vh 0 0 11vw;
+    top: -2.8vh;
+    left: -8vw;
+    font-size: 10vh;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/*INPUT BOX*/
+input {
+    text-align: center;
+    font-family: europa, sans-serif;
+    color: #607D8B;
+    font-style: normal;
+    font-weight: 500;
+    width: 15%;
+    padding: 12px 20px;
+    border: 2px solid #607D8B;
+    transition: 0.5s;
+    outline: none;
+    background-color: #f8f8f8;
+    margin: 1%;
+}
+
+input:focus {
+    border: 2px solid #0089f2;
+}
+
+textarea {
+    margin: 1%;
+    width: 50%;
+    height: 200px;
+    background-color: #f8f8f8;
+    text-align: center;
+    font-family: europa, sans-serif;
+    color: #607D8B;
+    font-style: normal;
+    font-weight: 500;
+    border: 2px solid #607D8B;
+    outline: none;
+}
+
+textarea:focus {
+    border: 2px solid #0089f2;
+}
+
+select {
+    text-align: center;
+    font-family: europa, sans-serif;
+    color: #607D8B;
+    font-style: normal;
+    font-weight: 500;
+    width: 15%;
+    padding: 12px 20px;
+    border: 2px solid #607D8B;
+    transition: 0.5s;
+    outline: none;
+    background-color: #f8f8f8;
+    margin: 1%;
+}
+
+select:focus {
+    border: 2px solid #0089f2;
+}
+/*BUTTONS*/
+button {
+  background-color: #0089f2;
+  border: 3px solid #0089f2;
+  border-radius: 3px;
+  color: #f8f8f8;
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  width: 10%;
+  height: 35px;
+}
+
+button:hover {
+  box-shadow: 0px 0px 0px 1px #00b1f2;
+}
+
+/*HEADING*/
+h1 {
+    font-family: europa, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
